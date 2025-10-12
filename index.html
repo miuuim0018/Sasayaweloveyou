@@ -64,6 +64,7 @@
                 <div class="hidden md:flex space-x-8 mr-8">
                     <a href="#about-us" data-key="nav_about" class="text-gray-600 hover:text-teal-500 transition duration-300">我們的介紹</a>
                     <a href="#itinerary" data-key="nav_plan" class="text-gray-600 hover:text-teal-500 transition duration-300">我們的約定</a>
+                    <a href="#gemini-fun-facts" data-key="nav_gemini" class="text-gray-600 hover:text-teal-500 transition duration-300">AI 導遊</a>
                     <a href="#memories" data-key="nav_memories" class="text-gray-600 hover:text-teal-500 transition duration-300">回憶精選</a>
                     <a href="#quiz" data-key="nav_quiz" class="text-gray-600 hover:text-teal-500 transition duration-300">趣味小測驗</a>
                     <a href="#messages" data-key="nav_messages" class="text-gray-600 hover:text-teal-500 transition duration-300">給您的話</a>
@@ -113,7 +114,7 @@
             <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 text-center">
                 <svg class="mx-auto h-20 w-20" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="90" fill="#F7C03B"/><path d="M65 60C65 54.4772 69.4772 50 75 50C80.5228 50 85 54.4772 85 60" stroke="black" stroke-width="8" stroke-linecap="round"/><path d="M115 60C115 54.4772 119.477 50 125 50C130.523 50 135 54.4772 135 60" stroke="black" stroke-width="8" stroke-linecap="round"/><circle cx="80" cy="90" r="5" fill="black"/><circle cx="120" cy="90" r="5" fill="black"/><path d="M95 110H105C107.761 110 110 112.239 110 115V115C110 117.761 107.761 120 105 120H95C92.2386 120 90 117.761 90 115V115C90 112.239 92.2386 110 95 110Z" fill="white"/></svg>
                 <h3 class="text-2xl font-bold mt-4 mb-2" data-key="plan_subtitle">我們的豆花之約</h3>
-                <p class="text-gray-600 leading-relaxed" data-key="plan_desc">教授，雖然我們課業繁忙，只能空出一個下午的時間，但我們心中最想做的事，就是和您一起去吃我們最愛的嘉義豆花，好好地聊一聊彼此的近況。<br><br>我們也為您準備了一份充滿心意的小禮物，希望能給您一個驚喜！</p>
+                <p class="text-gray-600 leading-relaxed" data-key="plan_desc">教授，雖然我們課業繁忙，只能空出一個 afternoon 的時間，但我們心中最想做的事，就是和您一起去吃我們最愛的嘉義豆花，好好地聊一聊彼此的近況。<br><br>我們也為您準備了一份充滿心意的小禮物，希望能給您一個驚喜！</p>
             </div>
         </section>
 
@@ -189,7 +190,7 @@
     <script>
         const translations = {
             zh: {
-                nav_about: '我們的介紹', nav_plan: '我們的約定', nav_memories: '回憶精選', nav_quiz: '趣味小測驗', nav_messages: '給您的話',
+                nav_about: '我們的介紹', nav_plan: '我們的約定', nav_gemini: 'AI 導遊', nav_memories: '回憶精選', nav_quiz: '趣味小測驗', nav_messages: '給您的話',
                 hero_title: 'Sasaya先生、台湾へようこそ！', hero_subtitle: '我們好想您！終於等到您要來台灣和我們見面了！',
                 about_title: '來自嘉義大學的我們',
                 student_a_desc: '嘉義大學的美食探索家，帶您吃遍道地小吃！',
@@ -214,7 +215,7 @@
                 footer_greeting: '期待與您在台灣相見！', footer_greeting_ja: '台湾で会えるのを楽しみにしています！', footer_contact: '有任何問題，請隨時聯絡我們！', footer_contact_info: '聯絡方式：[在這裡填入你們的聯絡方式]',
             },
             ja: {
-                nav_about: '私たちの紹介', nav_plan: '私たちの約束', nav_memories: '思い出のベストショット', nav_quiz: 'ミニクイズ', nav_messages: '先生へのメッセージ',
+                nav_about: '私たちの紹介', nav_plan: '私たちの約束', nav_gemini: 'AIガイド', nav_memories: '思い出のベストショット', nav_quiz: 'ミニクイズ', nav_messages: '先生へのメッセージ',
                 hero_title: 'Sasaya先生、台湾へようこそ！', hero_subtitle: '先生に会いたかったです！やっと台湾で再会できるのを、心から待っていました！',
                 about_title: '嘉義大学の私たち',
                 student_a_desc: '嘉義大学のグルメ専門家。美味しいローカルフードをご案内します！',
@@ -315,7 +316,17 @@
             geminiLoadingIndicator.classList.remove('hidden');
             geminiSubmitBtn.disabled = true;
 
-            const apiKey = ""; // API 金鑰留空
+            // ▼▼▼▼▼ 請將您複製的 API 金鑰，貼在下方的引號之間 ▼▼▼▼▼
+            const apiKey = "AIzaSyB2httEeB9lczPckNlG8es_nseTV0B8Kj8"; // 例如: const apiKey = "AIzaSy...4e5f6g7h8i";
+            // ▲▲▲▲▲ 請將您複製的 API 金鑰，貼在上方的引號之間 ▲▲▲▲▲
+            
+            if (apiKey === "在這裡貼上您自己的 API 金鑰") {
+                geminiResponseContainer.textContent = '請先在程式碼中填入您的 API 金鑰。';
+                geminiLoadingIndicator.classList.add('hidden');
+                geminiSubmitBtn.disabled = false;
+                return;
+            }
+
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
             const systemPrompt = "You are a friendly and knowledgeable tour guide for Chiayi, Taiwan. You are helping Professor Sasaya, who is visiting his students (葉怡嫻, 朱書靚, 劉芷瑩, 陳品瑜). Answer his questions about Chiayi or Taiwan concisely and cheerfully in a single paragraph. Respond in the language of the user's query (Traditional Chinese or Japanese).";
