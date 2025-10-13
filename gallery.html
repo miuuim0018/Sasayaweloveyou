@@ -43,9 +43,9 @@
 </head>
 <body class="bg-gray-100">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top: 0; z-index: 50;">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-teal-600 flex items-center gap-3">
+            <a href="welcome_sasaya.html" class="text-2xl font-bold text-teal-600 flex items-center gap-3">
                  &larr; <span data-key="nav_back">返回主頁</span>
             </a>
             <div class="lang-switch text-sm text-gray-500">
@@ -119,22 +119,128 @@
         document.getElementById('lang-ja').addEventListener('click', () => setLanguage('ja'));
         
         // --- Photo Gallery Logic ---
-        const galleryGrid = document.getElementById('gallery-grid');
-        const photoCount = 50;
         
-        for (let i = 1; i <= photoCount; i++) {
+        const photoUrls = [
+            "https://i.ibb.co/vv16PZGm/IMG-0214.jpg",
+            "https://i.ibb.co/Xr9rWKGz/IMG-0215.jpg",
+            "https://i.ibb.co/rGZ5LWy7/IMG-0216.jpg",
+            "https://i.ibb.co/ds8fqzGL/IMG-0217.jpg",
+            "https://i.ibb.co/XrFfxpv8/IMG-0248.jpg",
+            "https://i.ibb.co/chCd2MgV/IMG-1282.jpg",
+            "https://i.ibb.co/rGG58L81/IMG-1283.jpg",
+            "https://i.ibb.co/pBBJdS0G/IMG-1285.jpg",
+            "https://i.ibb.co/DHcBnsKT/IMG-1308.jpg",
+            "https://i.ibb.co/Pzhg8MBN/IMG-1309.jpg",
+            "https://i.ibb.co/hFmLcL1z/IMG-1310.jpg",
+            "https://i.ibb.co/67yKj49M/IMG-1322.jpg",
+            "https://i.ibb.co/4LCWYgk/IMG-1475.jpg",
+            "https://i.ibb.co/F4JB4hcb/IMG-1476.jpg",
+            "https://i.ibb.co/DHb582db/IMG-1477.jpg",
+            "https://i.ibb.co/DDnymrt5/IMG-1478.jpg",
+            "https://i.ibb.co/q3YXgcsq/IMG-1479.jpg",
+            "https://i.ibb.co/d4XKr5g1/IMG-1480.jpg",
+            "https://i.ibb.co/9Hc87hRK/IMG-1481.jpg",
+            "https://i.ibb.co/KjskHfRX/IMG-1488.jpg",
+            "https://i.ibb.co/XxKfb2fC/IMG-1489.jpg",
+            "https://i.ibb.co/LDSt2nS3/IMG-1490.jpg",
+            "https://i.ibb.co/FbTxM4Lk/IMG-1491.jpg",
+            "https://i.ibb.co/3mQCMq3j/IMG-1492.jpg",
+            "https://i.ibb.co/pjpM8s3R/IMG-1495.jpg",
+            "https://i.ibb.co/Vpcs7CdQ/IMG-1498.jpg",
+            "https://i.ibb.co/5xcHWw9t/IMG-1501.jpg",
+            "https://i.ibb.co/Hpd2tBpw/IMG-1502.jpg",
+            "https://i.ibb.co/MyPWF8Rp/IMG-1503.jpg",
+            "https://i.ibb.co/fdzDKZVL/IMG-1504.jpg",
+            "https://i.ibb.co/B5ZMLHTG/IMG-1505.jpg",
+            "https://i.ibb.co/WXvF8df/IMG-1506.jpg",
+            "https://i.ibb.co/WvKjbbPn/IMG-1517.jpg",
+            "https://i.ibb.co/LDDPSRYV/IMG-1519.jpg",
+            "https://i.ibb.co/zDmp4pD/IMG-1520.jpg",
+            "https://i.ibb.co/Xk7Hp9hc/IMG-1521.jpg",
+            "https://i.ibb.co/CpvF1DNt/IMG-1522.jpg",
+            "https://i.ibb.co/hFxWB2Pc/IMG-1523.jpg",
+            "https://i.ibb.co/W4J0x60N/IMG-1524.jpg",
+            "https://i.ibb.co/xqDdQ8xg/IMG-1537.jpg",
+            "https://i.ibb.co/99JwDt05/IMG-1542.jpg",
+            "https://i.ibb.co/vvM00z0Q/IMG-1544.jpg",
+            "https://i.ibb.co/fzS7ry4v/IMG-1545.jpg",
+            "https://i.ibb.co/BHVszhf2/IMG-1548.jpg",
+            "https://i.ibb.co/mF0JZN75/IMG-1549.jpg",
+            "https://i.ibb.co/WWdvNPJp/IMG-1552.jpg",
+            "https://i.ibb.co/9HWjdxY5/IMG-1553.jpg",
+            "https://i.ibb.co/ds4Jh1RF/IMG-1554.jpg",
+            "https://i.ibb.co/bgct58Yt/IMG-1559.jpg",
+            "https://i.ibb.co/bj5B8mLM/IMG-1569.jpg",
+            "https://i.ibb.co/Lz1vpkVD/IMG-1570.jpg",
+            "https://i.ibb.co/XxrLgPFC/IMG-1574.jpg",
+            "https://i.ibb.co/sJcb08zS/IMG-1575.jpg",
+            "https://i.ibb.co/fdKMYsb7/IMG-1577.jpg",
+            "https://i.ibb.co/DDGscRdR/IMG-1578.jpg",
+            "https://i.ibb.co/PGNbcNNd/IMG-1579.jpg",
+            "https://i.ibb.co/xKgK415F/IMG-1580.jpg",
+            "https://i.ibb.co/67FNSGRc/IMG-1581.jpg",
+            "https://i.ibb.co/Y7P1y0RF/IMG-1588.jpg",
+            "https://i.ibb.co/fGGVqLSh/IMG-1589.jpg",
+            "https://i.ibb.co/qMzT5Szn/IMG-1591.jpg",
+            "https://i.ibb.co/V0fRRBWL/IMG-1593.jpg",
+            "https://i.ibb.co/DfmMjvCD/IMG-1595.jpg",
+            "https://i.ibb.co/3GkTP7x/IMG-1596.jpg",
+            "https://i.ibb.co/ZpJqrNNn/IMG-1597.jpg",
+            "https://i.ibb.co/Lhdx7M9b/IMG-1598.jpg",
+            "https://i.ibb.co/n9jysTc/IMG-1599.jpg",
+            "https://i.ibb.co/hxqtR2P2/IMG-1600.jpg",
+            "https://i.ibb.co/bgpjmnTF/IMG-1602.jpg",
+            "https://i.ibb.co/rf2WZ5PF/IMG-1604.jpg",
+            "https://i.ibb.co/ycJR9nf3/IMG-1605.jpg",
+            "https://i.ibb.co/Xxx7tqD8/IMG-1606.jpg",
+            "https://i.ibb.co/1JJqtzRN/IMG-1607.jpg",
+            "https://i.ibb.co/d0MMZnYc/IMG-1608.jpg",
+            "https://i.ibb.co/ynnq86rd/IMG-1609.jpg",
+            "https://i.ibb.co/23PCrhKf/IMG-1610.jpg",
+            "https://i.ibb.co/bScQnbB/IMG-1611.jpg",
+            "https://i.ibb.co/qL7nYNvW/IMG-1612.jpg",
+            "https://i.ibb.co/TM9sZ1zF/IMG-1613.jpg",
+            "https://i.ibb.co/672LwxMm/IMG-1616.jpg",
+            "https://i.ibb.co/TDND5RnR/IMG-1617.jpg",
+            "https://i.ibb.co/21SwJK7H/IMG-1621.jpg",
+            "https://i.ibb.co/1f6zDn0J/IMG-1624.jpg",
+            "https://i.ibb.co/C3HLvLQ3/IMG-1628.jpg",
+            "https://i.ibb.co/jZkGHQYM/IMG-9162.jpg",
+            "https://i.ibb.co/b5gYFrJW/IMG-9167.jpg",
+            "https://i.ibb.co/7dGKFs7f/IMG-9170.jpg",
+            "https://i.ibb.co/1CMd4vy/IMG-9172.jpg",
+            "https://i.ibb.co/xtjpph88/IMG-9214.jpg",
+            "https://i.ibb.co/ZR2MWBGp/IMG-9218.jpg",
+            "https://i.ibb.co/Kz7v1xfH/IMG-9245.jpg",
+            "https://i.ibb.co/kVYZ5K2Y/IMG-9246.jpg",
+            "https://i.ibb.co/cKBDHt8y/IMG-9247.jpg",
+            "https://i.ibb.co/Kpjxymtq/IMG-9248.jpg",
+            "https://i.ibb.co/mCQFhzCJ/IMG-9251.jpg",
+            "https://i.ibb.co/N61CFjH7/IMG20250816142240.jpg",
+            "https://i.ibb.co/r2yJLKZY/IMG20250816143417.jpg",
+            "https://i.ibb.co/MDN8dYGg/IMG20250816143418.jpg",
+            "https://i.ibb.co/yctwKnD6/IMG20250816144147.jpg",
+            "https://i.ibb.co/XZSYfJMN/IMG20250816144156.jpg",
+            "https://i.ibb.co/60NVmdbB/IMG20250816144158.jpg",
+            "https://i.ibb.co/MxZnr99L/IMG20250816144208.jpg",
+        ];
+
+        const galleryGrid = document.getElementById('gallery-grid');
+
+        photoUrls.forEach((url, index) => {
             const imgContainer = document.createElement('div');
             imgContainer.className = 'aspect-w-1 aspect-h-1';
             
             const img = document.createElement('img');
-            img.src = `https://placehold.co/400x400/e2e8f0/94a3b8?text=照片+${i}`;
-            img.alt = `印尼回憶照片 ${i}`;
+            img.src = url;
+            img.alt = `印尼回憶照片 ${index + 1}`;
             img.className = 'w-full h-full object-cover rounded-lg gallery-img';
             img.loading = 'lazy'; // Lazy loading for better performance
             
             imgContainer.appendChild(img);
             galleryGrid.appendChild(imgContainer);
-        }
+        });
+
 
         // --- Lightbox Logic ---
         const lightbox = document.getElementById('lightbox');
