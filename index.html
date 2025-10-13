@@ -163,5 +163,221 @@
             <h2 class="text-3xl font-bold text-center mb-12" data-key="quiz_title">關於我們的趣味小測驗</h2>
             <div class="max-w-2xl mx-auto space-y-8">
                 <div class="bg-white p-6 rounded-lg shadow-md"><p class="font-bold text-lg mb-4" data-key="q1_text">問題一：請問，我們之中誰最喜歡找國鴻教授聊天?</p><div id="q1-options" class="grid grid-cols-2 gap-4"><button onclick="checkAnswer(1, 'A')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold">葉怡嫻 (Elain)</button><button onclick="checkAnswer(1, 'B')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold">朱書靚 (Jessica)</button><button onclick="checkAnswer(1, 'C')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold">劉芷瑩 (Laura)</button><button onclick="checkAnswer(1, 'D')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold">陳品瑜 (Phoebe)</button></div><p id="q1-result" class="mt-4 font-bold hidden"></p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md"><p class="font-bold text-lg mb-4" data-key="q2_text">問題二：在印尼的時候，是誰最常用一句印尼話逗得大家哈哈大笑？</p><div id="q2-options" class="grid grid-cols-2 gap-4"><button onclick="checkAnswer(2, 'A')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold">葉怡嫻 (Elain)</button><button onclick="checkAnswer(2, 'B')" class="quiz-option bg-gray-200 p-3 rounded-
+                <div class="bg-white p-6 rounded-lg shadow-md"><p class="font-bold text-lg mb-4" data-key="q2_text">問題二：在印尼的時候，是誰最常用一句印尼話逗得大家哈哈大笑？</p><div id="q2-options" class="grid grid-cols-2 gap-4"><button onclick="checkAnswer(2, 'A')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold">葉怡嫻 (Elain)</button><button onclick="checkAnswer(2, 'B')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold">朱書靚 (Jessica)</button><button onclick="checkAnswer(2, 'C')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold">劉芷瑩 (Laura)</button><button onclick="checkAnswer(2, 'D')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold">陳品瑜 (Phoebe)</button></div><p id="q2-result" class="mt-4 font-bold hidden"></p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md"><p class="font-bold text-lg mb-4" data-key="q3_text">問題三：我們約好要一起去吃什麼台灣甜點呢？</p><div id="q3-options" class="grid grid-cols-2 gap-4"><button onclick="checkAnswer(3, 'Bubble Tea')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold" data-key="q3_op1">珍珠奶茶</button><button onclick="checkAnswer(3, 'Mango Ice')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold" data-key="q3_op2">芒果冰</button><button onclick="checkAnswer(3, 'Tofu Pudding')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold" data-key="q3_op3">豆花</button><button onclick="checkAnswer(3, 'Wheel Cakes')" class="quiz-option bg-gray-200 p-3 rounded-lg font-semibold" data-key="q3_op4">車輪餅</button></div><p id="q3-result" class="mt-4 font-bold hidden"></p></div>
+            </div>
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages">
+            <h2 class="text-3xl font-bold text-center mb-12" data-key="messages_title">我們有話想對您說...</h2>
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4"><img src="https://i.postimg.cc/SsYwvd50/IMG-0217.jpg" class="w-16 h-16 rounded-full flex-shrink-0 object-cover" alt="葉怡嫻 的頭像"><div><h4 class="font-bold text-lg text-teal-700" data-key="msg_a_from">來自 葉怡嫻 (Elain) 的訊息</h4><p class="text-gray-600 mt-2" data-key="msg_a_content">「Sasaya～～網站是我做的喔(⁎⁍̴̛ᴗ⁍̴̛⁎) 娃娃是朱書靚跟劉芷瑩做的～ 我們搞很久呦 還有你怎麼可以豆花偷跑 我們的豆花之約呢(´･Д･)」</p></div></div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4"><img src="https://i.postimg.cc/G38cWJYk/IMG-0214.jpg" class="w-16 h-16 rounded-full flex-shrink-0 object-cover" alt="朱書靚 的頭像"><div><h4 class="font-bold text-lg text-sky-700" data-key="msg_b_from">來自 朱書靚 (Jessica) 的訊息</h4><p class="text-gray-600 mt-2" data-key="msg_b_content">「老師，我覺得嘉義布袋的肉圓比彰化的好吃」</p></div></div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4"><img src="https://i.postimg.cc/zGd6D4YG/IMG-0215.jpg" class="w-16 h-16 rounded-full flex-shrink-0 object-cover" alt="劉芷瑩 的頭像"><div><h4 class="font-bold text-lg text-red-700" data-key="msg_c_from">來自 劉芷瑩 (Laura) 的訊息</h4><p class="text-gray-600 mt-2" data-key="msg_c_content">「老師！好可惜連假有事失去一起出去玩的機會嗚嗚嗚；； 之後還有機會的話，一起約國鴻老師出來玩吧♪」</p></div></div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4"><img src="https://i.postimg.cc/Pq97YZqF/IMG-0216.jpg" class="w-16 h-16 rounded-full flex-shrink-0 object-cover" alt="陳品瑜 的頭像"><div><h4 class="font-bold text-lg text-amber-700" data-key="msg_d_from">來自 陳品瑜 (Phoebe) 的訊息</h4><p class="text-gray-600 mt-2" data-key="msg_d_content">「教授，歡迎來我家鄉！除了有名的景點，我也想帶您看看我們平常生活的有趣角落。」</p></div></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-20">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="text-2xl font-bold mb-2" data-key="footer_greeting">期待與您在台灣相見！</p>
+            <p data-key="footer_greeting_ja">台湾で会えるのを楽しみにしています！</p>
+            <div class="mt-4"><p data-key="footer_contact">有任何問題，請隨時聯絡我們！</p><p class="text-gray-400 mt-2" data-key="footer_contact_info">聯絡方式：[@jess_tn1024_yg32]</p></div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            zh: {
+                nav_about: '我們的介紹', nav_plan: '我們的約定', nav_gemini: 'AI 導遊', nav_memories: '回憶精選', nav_quiz: '趣味小測驗', nav_messages: '給您的話',
+                hero_title: 'Sasaya先生、台湾へようこそ！', hero_subtitle: '我們好想您！終於等到您要來台灣和我們見面了！',
+                about_title: '來自嘉義大學的我們',
+                student_a_desc: '嘉義大學的美食探索家，帶您吃遍道地小吃！',
+                student_b_desc: '嘉義大學的歷史文化迷，跟您分享在地的故事。',
+                student_c_desc: '嘉義大學的戶外探險王，最懂哪裡有秘境風景。',
+                student_d_desc: '嘉義大學的城市漫遊者，帶您發現巷弄的驚喜。',
+                plan_title: '與您相約的午後', plan_subtitle: '我們的豆花之約',
+                plan_desc: '教授，雖然我們課業繁忙，只能空出一個下午的時間，但我們心中最想做的事，就是和您一起去吃我們最愛的嘉義豆花，好好地聊一聊彼此的近況。<br><br>我們也為您準備了一份充滿心意的小禮物，希望能給您一個驚喜！',
+                gemini_title: '✨ 嘉義風情話', gemini_subtitle: '對嘉義或台灣有什麼好奇的嗎？讓 AI 為您解答！', gemini_button: '發問！', gemini_loading: 'AI 思考中...',
+                memories_title: '我們的印尼回憶精選', memories_subtitle: '這裡是一些我們特別喜歡的瞬間！', memories_button: '查看完整相簿 &rarr;',
+                quiz_title: '關於我們的趣味小測驗',
+                q1_text: '問題一：請問，我們之中誰最喜歡找國鴻教授聊天?',
+                q2_text: '問題二：在印尼的時候，是誰最常用一句印尼話逗得大家哈哈大笑？',
+                q3_text: '問題三：我們約好要一起去吃什麼台灣甜點呢？',
+                q3_op1: '珍珠奶茶', q3_op2: '芒果冰', q3_op3: '豆花', q3_op4: '車輪餅',
+                quiz_correct: '答對了！您真了解我們！', quiz_incorrect: '答錯了，不過沒關係！',
+                messages_title: '我們有話想對您說...',
+                msg_a_from: '來自 葉怡嫻 (Elain) 的訊息', msg_a_content: '「Sasaya～～網站是我做的喔(⁎⁍̴̛ᴗ⁍̴̛⁎) 娃娃是朱書靚跟劉芷瑩做的～ 我們搞很久呦 還有你怎麼可以豆花偷跑 我們的豆花之約呢(´･Д･)」',
+                msg_b_from: '來自 朱書靚 (Jessica) 的訊息', msg_b_content: '「老師，我覺得嘉義布袋的肉圓比彰化的好吃」',
+                msg_c_from: '來自 劉芷瑩 (Laura) 的訊息', msg_c_content: '「老師！好可惜連假有事失去一起出去玩的機會嗚嗚嗚；； 之後還有機會的話，一起約國鴻老師出來玩吧♪」',
+                msg_d_from: '來自 陳品瑜 (Phoebe) 的訊息', msg_d_content: '「教授，歡迎來我家鄉！除了有名的景點，我也想帶您看看我們平常生活的有趣角落。」',
+                footer_greeting: '期待與您在台灣相見！', footer_greeting_ja: '台湾で会えるのを楽しみにしています！', footer_contact: '有任何問題，請隨時聯絡我們！', footer_contact_info: '聯絡方式：[@jess_tn1024_yg32]',
+            },
+            ja: {
+                nav_about: '私たちの紹介', nav_plan: '私たちの約束', nav_gemini: 'AIガイド', nav_memories: '思い出のベストショット', nav_quiz: 'ミニクイズ', nav_messages: '先生へのメッセージ',
+                hero_title: 'Sasaya先生、台湾へようこそ！', hero_subtitle: '先生に会いたかったです！やっと台湾で再会できるのを、心から待っていました！',
+                about_title: '嘉義大学の私たち',
+                student_a_desc: '嘉義大学のグルメ専門家。美味しいローカルフードをご案内します！',
+                student_b_desc: '嘉義大学の歴史文化ファン。この土地の物語をシェアします。',
+                student_c_desc: '嘉義大学のアウトドア冒険王。絶景スポットならお任せください。',
+                student_d_desc: '嘉義大学の街歩き名人。路地の驚きを一緒に発見しましょう。',
+                plan_title: '午後の約束', plan_subtitle: '私たちの豆花デート',
+                plan_desc: '先生、授業で忙しく、午後の時間しか取れませんが、私たちが一番したいことは、先生と一緒に大好きな嘉義の豆花を食べながら、近況を語り合うことです。<br><br>心ばかりのプレゼントも用意しましたので、サプライズになれば嬉しいです！',
+                gemini_title: '✨ 嘉義の豆知識', gemini_subtitle: '嘉義や台湾について何か知りたいことはありますか？AIにお任せください！', gemini_button: '質問する', gemini_loading: 'AIが考えています...',
+                memories_title: '私たちのインドネシア思い出のベストショット', memories_subtitle: '私たちが特に気に入っている瞬間です！', memories_button: '全ての写真を見る &rarr;',
+                quiz_title: '私たちに関するミニクイズ',
+                q1_text: '質問1：私たちの中で、誰が一番國鴻先生とおしゃべりするのが好きでしょう？',
+                q2_text: '質問2：インドネシアにいた時、インドネシア語の一言で皆を一番笑わせたのは誰でしょう？',
+                q3_text: '質問3：私たちが一緒に食べに行くと約束した台湾のデザートは何でしょう？',
+                q3_op1: 'タピオカミルクティー', q3_op2: 'マンゴーかき氷', q3_op3: '豆花', q3_op4: '今川焼き',
+                quiz_correct: '正解です！さすが先生！', quiz_incorrect: '残念、不正解です！',
+                messages_title: '先生へのメッセージ...',
+                msg_a_from: '葉怡嫻 (Elain) からのメッセージ', msg_a_content: '「Sasaya～～このサイトは私が作ったんですよ(⁎⁍̴̛ᴗ⁍̴̛⁎) ぬいぐるみは朱書靚と劉芷瑩が作りました～ 私たち、すごく時間をかけたんです。それと、どうしてフライングで豆花を食べちゃったんですか？私たちの豆花デートの約束はどうなるんですか(´･Д･)」',
+                msg_b_from: '朱書靚 (Jessica) からのメッセージ', msg_b_content: '「先生、私は嘉義の布袋の肉圓（バーワン）は彰化のものより美味しいと思います」',
+                msg_c_from: '劉芷瑩 (Laura) からのメッセージ', msg_c_content: '「先生！連休中に用事があって、一緒に遊びに行く機会を逃してしまって本当に残念です；； もしまた機会があれば、國鴻先生も誘って一緒に遊びに行きましょう♪」',
+                msg_d_from: '陳品瑜 (Phoebe) からのメッセージ', msg_d_content: '「先生、私の故郷へようこそ！有名な観光地のほか、私たちが普段生活している面白い場所も案内したいです。」',
+                footer_greeting: '期待與您在台灣相見！', footer_greeting_ja: '期待與您在台灣相見！', footer_contact: '何か質問があれば、いつでもご連絡ください！', footer_contact_info: '連絡先：[@jess_tn1024_yg32]',
+            }
+        };
+
+        const langZhBtn = document.getElementById('lang-zh');
+        const langJaBtn = document.getElementById('lang-ja');
+        const geminiPromptInputEl = document.getElementById('gemini-prompt');
+
+        const setLanguage = (lang) => {
+            document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'ja';
+            const elements = document.querySelectorAll('[data-key]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            if (lang === 'zh') {
+                langZhBtn.classList.add('active-lang');
+                langJaBtn.classList.remove('active-lang');
+                geminiPromptInputEl.placeholder = "例如：嘉義有什麼必買的伴手禮？";
+            } else {
+                langJaBtn.classList.add('active-lang');
+                langZhBtn.classList.remove('active-lang');
+                geminiPromptInputEl.placeholder = "例：嘉義で必ず買うべきお土産は何ですか？";
+            }
+            localStorage.setItem('language', lang);
+        };
+        
+        langZhBtn.addEventListener('click', () => setLanguage('zh'));
+        langJaBtn.addEventListener('click', () => setLanguage('ja'));
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('language') || 'zh';
+            setLanguage(savedLang);
+        });
+
+        // Quiz Logic
+        const correctAnswers = { 1: 'A', 2: 'C', 3: 'Tofu Pudding' };
+        function checkAnswer(questionNumber, selectedAnswer) {
+            const currentLang = localStorage.getItem('language') || 'zh';
+            const resultElement = document.getElementById(`q${questionNumber}-result`);
+            const optionsContainer = document.getElementById(`q${questionNumber}-options`);
+            const buttons = optionsContainer.getElementsByTagName('button');
+            const correctAnswer = correctAnswers[questionNumber];
+            for (let button of buttons) {
+                button.disabled = true;
+                const answerValue = button.onclick.toString().includes("'A'") ? 'A' :
+                    button.onclick.toString().includes("'B'") ? 'B' :
+                    button.onclick.toString().includes("'C'") ? 'C' :
+                    button.onclick.toString().includes("'D'") ? 'D' :
+                    button.getAttribute('data-key') === 'q3_op3' ? 'Tofu Pudding' : 
+                    button.getAttribute('data-key') === 'q3_op1' ? 'Bubble Tea' : 
+                    button.getAttribute('data-key') === 'q3_op2' ? 'Mango Ice' : 'Wheel Cakes';
+                if (answerValue === correctAnswer) { button.classList.add('correct'); }
+            }
+            if (selectedAnswer === correctAnswer) {
+                resultElement.textContent = translations[currentLang].quiz_correct;
+                resultElement.style.color = '#16a34a';
+            } else {
+                resultElement.textContent = translations[currentLang].quiz_incorrect;
+                resultElement.style.color = '#ef4444';
+                for (let button of buttons) { if (button.onclick.toString().includes(`'${selectedAnswer}'`)) { button.classList.add('incorrect'); break; } }
+            }
+            resultElement.classList.remove('hidden');
+        }
+
+        // Gemini API Logic
+        const geminiSubmitBtn = document.getElementById('gemini-submit');
+        const geminiPromptInput = document.getElementById('gemini-prompt');
+        const geminiResponseContainer = document.getElementById('gemini-response');
+        const geminiLoadingIndicator = document.getElementById('gemini-loading');
+
+        async function callGemini(prompt) {
+            geminiResponseContainer.textContent = '';
+            geminiLoadingIndicator.classList.remove('hidden');
+            geminiSubmitBtn.disabled = true;
+
+            const apiKey = "AIzaSyB2httEeB9lczPckNlG8es_nseTV0B8Kj8"; 
+            
+            if (apiKey === "在這裡貼上您自己的 API 金鑰") {
+                geminiResponseContainer.textContent = '請先在程式碼中填入您的 API 金鑰。';
+                geminiLoadingIndicator.classList.add('hidden');
+                geminiSubmitBtn.disabled = false;
+                return;
+            }
+
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const systemPrompt = "You are a friendly and knowledgeable tour guide for Chiayi, Taiwan. You are helping Professor Sasaya, who is visiting his students (葉怡嫻, 朱書靚, 劉芷瑩, 陳品瑜). Answer his questions about Chiayi or Taiwan concisely and cheerfully in a single paragraph. Respond in the language of the user's query (Traditional Chinese or Japanese).";
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                tools: [{ "google_search": {} }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    geminiResponseContainer.textContent = text;
+                } else {
+                    geminiResponseContainer.textContent = '抱歉，無法生成回覆。請再試一次。';
+                    console.error('Unexpected API response structure:', result);
+                }
+
+            } catch (error) {
+                console.error('Error calling Gemini API:', error);
+                geminiResponseContainer.textContent = '發生錯誤，請查看主控台以獲取詳細資訊。';
+            } finally {
+                geminiLoadingIndicator.classList.add('hidden');
+                geminiSubmitBtn.disabled = false;
+            }
+        }
+
+        geminiSubmitBtn.addEventListener('click', () => {
+            const userPrompt = geminiPromptInput.value.trim();
+            if (userPrompt) {
+                callGemini(userPrompt);
+            }
+        });
+    </script>
+</body>
+</html>
 
